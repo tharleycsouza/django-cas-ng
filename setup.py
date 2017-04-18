@@ -29,14 +29,14 @@ setup(
     keywords=['django', 'cas', 'cas2', 'cas3', 'client', 'sso', 'single sign-on', 'authentication', 'auth'],
     license='BSD',
     long_description=readme,
-    name='django-cas-ng',
+    name='django-cas-ng-bacula',
     packages=['django_cas_ng', 'django_cas_ng.management', 'django_cas_ng.management.commands', 'django_cas_ng.migrations'],
     package_data = {
         'django_cas_ng': ['locale/*/LC_MESSAGES/*',],
     },
-    url='https://github.com/mingchen/django-cas-ng',
+    url='https://github.com/tharleycsouza/django-cas-ng',
     #bugtrack_url='https://github.com/mingchen/django-cas-ng/issues',  # not support this key
-    download_url ='https://github.com/mingchen/django-cas-ng/releases',
+    download_url ='https://github.com/tharleycsouza/django-cas-ng/releases',
     version='3.5.7',
     install_requires=['python-cas>=1.2.0'],
     zip_safe=False,  # dot not package as egg or django will not found management commands
