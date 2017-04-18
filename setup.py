@@ -30,7 +30,7 @@ setup(
     license='BSD',
     long_description=readme,
     name='django-cas-ng-bacula',
-    packages=['django_cas_ng_bacula', 'django_cas_ng.management', 'django_cas_ng.management.commands', 'django_cas_ng.migrations'],
+    packages=['django_cas_ng', 'django_cas_ng.management', 'django_cas_ng.management.commands', 'django_cas_ng.migrations'],
     package_data = {
         'django_cas_ng_bacula': ['locale/*/LC_MESSAGES/*',],
     },
