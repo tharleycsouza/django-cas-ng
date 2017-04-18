@@ -27,7 +27,7 @@ class CASBackend(ModelBackend):
 
             user = User.objects.create_user(username=username,
                                  email=username+"@locaweb.com.br",
-                                 password='globalpass')
+                                 password='')
             user.save()
         if attributes and request:
             request.session['attributes'] = attributes
