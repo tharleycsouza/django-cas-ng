@@ -20,6 +20,15 @@ class CASBackend(ModelBackend):
         """Verifies CAS ticket and gets or creates User object"""
         client = get_cas_client(service_url=service)
         username, attributes, pgtiou = client.verify_ticket(ticket)
+        from django.contrib.auth.models import User
+        try:
+            User.objects.get(username=username)
+        except User.DoesNotExist:
+
+            user = User.objects.create_user(username=username,
+                                 email=username+"@locaweb.com.br",
+                                 password='globalpass')
+            user.save()
         if attributes and request:
             request.session['attributes'] = attributes
 
