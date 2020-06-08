@@ -26,7 +26,7 @@ class CASBackend(ModelBackend):
         except User.DoesNotExist:
 
             user = User.objects.create_user(username=username,
-                                 email=username+"@locaweb.com.br",
+                                 email=username+"@seuemail.com.br",
                                  password='')
             user.save()
         if attributes and request:
